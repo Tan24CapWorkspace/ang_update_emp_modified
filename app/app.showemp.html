@@ -1,0 +1,16 @@
+<input type="button" (click)="sendDataToAddEmp()" value="Add Employee">
+<h2>Show All Employee</h2>
+<table border="1">
+    <tr>
+        <th>Employee Id</th>
+        <th>Employee Name</th>
+        <th>Employee Salary</th>
+    </tr>
+    <tr *ngFor="let data of emp_list ;let i=index">
+        <td> {{data.empId}}</td>
+        <td> {{data.empName}}</td>
+        <td> {{data.empSalary}}</td>
+        <td><input type="button" value="Delete" (click)="deleteEmployee(i)"/></td>
+        <td><input type="button" value="Update" (click)="displayEmployee(i)"/></td>
+    </tr>
+</table>

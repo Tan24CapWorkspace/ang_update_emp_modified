@@ -1,0 +1,34 @@
+<table>
+    <tr>
+        <td>Employee Id </td>
+        <td><input type="text" [(ngModel)]="empId" /> </td>
+    </tr>
+    <tr>
+        <td>Employee Name </td>
+        <td><input type="text" [(ngModel)]="empName" /> </td>
+    </tr>
+    <tr>
+        <td>Employee Salary </td>
+        <td><input type="text" [(ngModel)]="empSalary" /> </td>
+    </tr>
+</table>
+<show-emp  (notifyAddEmp)="addEmployee($event)" (notifyDelEmp)="deleteEmployee($event)"></show-emp>
+<h2>Update Employee</h2>
+<table>
+    <tr>
+        <td>Employee Id</td>
+        <input type="text" [(ngModel)]="empid" />
+    </tr>
+    <tr>
+        <td>Employee Name</td>
+        <input type="text" [(ngModel)]="empname" />
+    </tr>
+    <tr>
+        <td>Employee Salary</td>
+        <input type="text" [(ngModel)]="empsalary" />
+    </tr>
+
+    <tr>
+        <td><input type="button" value="Update" (click)="updateEmployee()" /></td>
+    </tr>
+</table>
